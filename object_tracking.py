@@ -25,6 +25,7 @@ while True:
     
     for n in zip(*loc[::-1]):
         cv2.rectangle(frame, n, (n[0] + h, n[1] + w),(0, 255, 0),2)
+        cv2.putText(frame,'Kalen Tras',(n[0] + 10, n[1] + 15 ), cv2.FONT_HERSHEY_COMPLEX, 2, (0,255,0), 2)
     cv2.imshow("frame",frame)
     
     if cv2.waitKey(25) & 0xFF == ord("q"):
