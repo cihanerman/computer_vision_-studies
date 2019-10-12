@@ -18,7 +18,7 @@ while True:
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
     face_casc = cv2.CascadeClassifier("haarcascade_frontalcatface.xml")
-    faces = face_casc.detectMultiScale(gray_frame,1.04,4)
+    faces = face_casc.detectMultiScale(gray_frame,1.1,4)
     
     for (x,y,w,h) in faces:
         cv2.rectangle(frame, (x,y), (x+w, y+h),(255, 0, 0),2)
