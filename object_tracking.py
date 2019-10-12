@@ -12,7 +12,7 @@ import numpy as np
 
 # code
 
-camera = cv2.VideoCapture(0) # 0 use for outher camera, link use for video
+camera = cv2.VideoCapture(1) # 0 use for outher camera, link use for video
 
 while True:
     ret, frame = camera.read()
