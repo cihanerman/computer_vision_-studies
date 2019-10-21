@@ -17,7 +17,7 @@ while True:
     ret, frame = camera.read()
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
-    face_casc = cv2.CascadeClassifier("eye.xml")
+    face_casc = cv2.CascadeClassifier("body.xml")
     faces = face_casc.detectMultiScale(gray_frame,1.1,4)
     
     for (x,y,w,h) in faces:
@@ -28,4 +28,4 @@ while True:
         break
 
 camera.release()
-cv2.destroyAllWindows()qq
+cv2.destroyAllWindows()
